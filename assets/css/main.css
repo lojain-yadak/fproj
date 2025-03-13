@@ -1,0 +1,1089 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --mainColor:#C9A581 ;
+    --secondColor:#121D23;
+    --mainFont:"Jost", serif;
+    --primaryFont:"Forum", serif
+}
+a{
+    color: none;
+    text-decoration: none;
+}
+button{
+    background: none;
+    border: none;
+}
+body{
+    background-color: var(--secondColor);
+    color: aliceblue;
+   
+}
+h2{
+    font-family: var(--primaryFont);
+}
+::-webkit-scrollbar {
+    width: 6px; /* Change width of the scrollbar */
+
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f0f0; /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #C8A480; /* Color of the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #C9A581; /* Color of the scrollbar thumb when hovered */
+}
+
+/* For Firefox */
+html {
+    scrollbar-width: thin; /* Change width of the scrollbar */
+    scrollbar-color: #C9A581 #f0f0f0; /* Colors of the thumb and track */
+}
+@media only screen and (max-width: 767px) {
+    body {
+        font-size: 16px;
+    }
+}
+.navbar-toggler {
+    color: #C9A581;
+    background-color: #C9A581;
+}
+.mycontainer{
+    width: calc(100% - 200px);
+    margin: auto;
+}
+::selection {
+    background-color: white; /* Background color of the selected text */
+    color: black; /* Text color of the selected text (optional) */
+  }
+/*start first content*/
+.somecontact{
+     
+        background: linear-gradient(90deg, var(--accent-color) 0%, var(--accent-secondary-color) 100%);
+        padding: 10px 0;
+    
+}
+
+ul,li{
+    list-style: none;
+}
+.email {
+    font-family: var(--mainFont);
+    color: var(--secondColor);
+
+}
+.email:hover ,.emailoffcanva:hover {
+    cursor: pointer;
+    color: aliceblue;
+}
+.border-secondcolor{
+    border-right: 2px solid var(--secondColor);
+   
+}
+.item {
+    color: var(--secondColor);
+    position: relative; /* Required for pseudo-element positioning */
+    display: inline-block; /* Ensure the span behaves like a block */
+  }
+.item svg ,.item i {
+    fill: var(--secondColor);
+    transition: all .3s ease-in-out;
+    color: var(--secondColor);
+}
+.item:hover svg ,.item:hover i{
+    fill: #fff;
+    color: #fff;
+}
+
+/*end first content*/
+
+/* Dropdown menu styles */
+.dropdown-menu{
+display: none;
+transition: all .5s ease-in-out;
+background: linear-gradient(to right,#C8A480, #ffe2c5);
+
+
+}
+.dropdown{
+       transition: all .5s ease-in-out;
+}
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+nav a{
+    color:#FFFFFF;
+    font-family: var(--mainFont);
+    font-weight:300 ;
+    font-size: 20px;
+    transition: all .3s ease-in-out;
+}
+.nav-link{
+    color:#FFFFFF;
+    font-family: var(--mainFont);
+    font-weight:500 ;
+    font-size: 20px;
+    transition: all .3s ease-in-out;
+}
+.nav-link:hover{
+    color:var(--mainColor);
+
+}
+.dropdown-item{
+    font-family: var(--primaryFont);
+    font-weight: 700;
+    font-size: large;
+    transition: all .3s ease-in-out;
+    background-color: initial;
+}
+.dropdown-item:hover{
+color: #fff;
+background-color: initial;
+margin-left: 1px;
+margin-bottom: 5px;
+}
+/* General Styles */
+.somecontact {
+    padding: 0;
+    background: linear-gradient(to right, #ccaa88, #fad2ab);
+    width: 100%;
+    height: auto; /* Changed to auto for responsiveness */
+    color: var(--secondColor);
+}
+
+/* Change the color of the email SVG icon */
+.email svg {
+    fill: var(--secondColor);
+}
+.emailoffcanva svg {
+    fill: var(--secondColor);
+    transition: all .5s;
+}
+.email:hover svg {
+    fill: aliceblue; /* Example hover color */
+}
+.emailoffcanva:hover svg {
+    fill: var(--mainColor); /* Example hover color */
+
+}
+.location svg {
+    fill: var(--secondColor);
+}
+
+@media (max-width: 768px) {
+    .somecontact {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .d-flex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 10px !important;
+    }
+
+    .social {
+        justify-content: flex-start !important;
+        margin-top: 10px;
+        display: flex;
+    }
+
+    .item {
+        padding: 5px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .email, .bi-geo-alt {
+        font-size: 14px;
+    }
+
+    .social {
+        gap: 5px;
+    }
+}
+/*start nav section*/
+.navbar{
+    background-color: var(--secondColor);
+}
+.bookatable {
+    position: relative; /* Required for positioning the pseudo-element */
+    display: inline-block; /* Ensures the button behaves like a block */
+    padding: 15px 40px;
+    border: 2px solid var(--mainColor);
+    background: none;
+    color: var(--mainColor);
+    font-family: var(--mainFont);
+    text-decoration: none; 
+    overflow: hidden; 
+    z-index: 1; 
+}
+.bookatable::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(to right,#C9A581,#edd4bb) ; /* Hover background color */
+    transform: scale(0); /* Start as invisible */
+    z-index: -1; /* Place it behind the button's content */
+    transition: transform 0.5s ease; /* Smooth transition */
+    border-radius: 75px;
+  }
+  
+ 
+  .bookatable:hover::before {
+    transform: scale(1); /* Expand to fill the button */
+  }
+  .bookatable:hover {
+    color: var(--secondColor);
+}
+
+#navbar {
+    position: fixed; /* Fix the sidebar to the viewport */
+    top: 0;
+    right: 0;
+    width: 100vh; /* Adjust the width as needed */
+    height: 100vh; /* Full height */
+    background-color: #f8f9fa; /* Background color */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+    transform: translateX(100%); /* Hide the sidebar by default */
+    transition: transform 0.3s ease; /* Smooth transition */
+    z-index: 1000; /* Higher z-index to ensure it appears above the header */
+}
+
+#navbar.show {
+    transform: translateX(0); /* Show the sidebar */
+}
+.sidebartitle{
+font-family: var(--primaryFont);
+width: 50%;
+font-size: 47px;
+font-weight: 500;
+text-align: center;
+text-wrap: wrap;
+color:#c9a581;
+  }
+  /* Disable interactions when inert */
+  #navbar[inert] {
+    pointer-events: none; /* Disable pointer events */
+    user-select: none; /* Disable text selection */
+    opacity: 0.5; /* Optional: Reduce opacity to indicate inert state */
+  }
+.buttonclose{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+ .close-sidebar-button svg{
+    fill: #000;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    margin-right:25px ;
+    border-radius:50% ;
+    background-color: #fac999;
+    font-size: 27px;
+    display: flex;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+ } 
+ .close-sidebar-button svg:hover{
+    background-color: #f6b97c;
+
+ }
+ .sidebarcontent{
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+ }
+ .description,.loc{
+    color:#000;
+    width: 50%;
+    text-align: center;
+ }
+ .tel{
+    font-family: var(--primaryFont);
+    width: 50%;
+    font-size: 47px;
+    font-weight: 500;
+    text-align: center;
+    text-wrap: wrap;
+    color:#c9a581;
+    transition: all .3s ease-in-out;
+}
+.tel:hover{
+    color: var(--secondColor);
+}
+.emailoffcanva{
+width: 50%;
+color: var(--secondColor);
+text-align: center;
+font: 400;
+margin-top: -20px;
+}
+.emailoffcanva:hover{
+color: var(--mainColor);
+}
+.date{
+    color: var(--secondColor);
+    width: 50%;
+    font-family:var(--primaryFont) ;
+    font-weight: 600;
+    text-align: center;
+}
+/* Existing styles remain unchanged */
+
+/* Media Query for Tablets (e.g., screens up to 768px) */
+@media (max-width: 768px) {
+    .sidebartitle {
+        width: 70%; /* Increase width for better readability */
+        font-size: 36px; /* Smaller font size for tablets */
+    }
+
+    .description,
+    .loc {
+        width: 70%; /* Increase width for better readability */
+    }
+
+    .tel {
+        width: 70%; /* Increase width for better readability */
+        font-size: 36px; /* Smaller font size for tablets */
+    }
+
+    .emailoffcanva {
+        width: 70%; /* Increase width for better readability */
+
+    }
+
+    .date {
+        width: 70%; /* Increase width for better readability */
+    }
+}
+
+/* Media Query for Mobile Devices (e.g., screens up to 576px) */
+@media (max-width: 576px) {
+    .sidebarcontent{
+        width: 100%;
+        justify-content:end ;
+        align-items: end;
+    }
+    .coffeeicon {
+      width: 55%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .coffeeicon img{
+        width: 5%;
+    }
+    .sidebartitle {
+        width: 60%; /* Full width for mobile */
+        font-size: 25px; 
+    }
+
+    .description,
+    .loc {
+        width: 50%; /* Full width for mobile */
+        margin-right: 20px;
+    }
+
+    .tel {
+        width: 60%; /* Full width for mobile */
+        font-size: 28px; /* Smaller font size for mobile */
+    }
+
+    .emailoffcanva {
+        width: 55%; /* Full width for mobile */
+    }
+
+    .date {
+        width: 55%; /* Full width for mobile */
+    }
+}
+/*end nav section*/
+
+/*start header section*/
+.header{
+  
+        position: relative; /* Ensure the header has a position */
+        z-index: 10; /* Lower z-index than the sidebar */
+        padding: 30px 0;
+}
+.header .container{
+    position: absolute;
+    top: 20%;
+    margin-left: 48px;
+   
+}
+.header.header-video .header-bg-video {
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+}
+.bgvideo{
+background: linear-gradient(to bottom,#171e22bc,#171e22bc);
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height:100%;
+}
+.header.header-video .header-bg-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+video {
+    object-fit: contain;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+.crafted{
+    width:50% ;
+    text-align: left;
+    color: #fff;
+    font-family: var(--mainFont);
+    font-size: 18px;
+}
+.headertitle{
+    width:60% ;
+    font-family: var(--primaryFont);
+    white-space: normal;
+    font-size:55px ;
+    text-align: left;
+    font-weight: lighter;
+
+}
+.discover{
+    width: 60%;
+    font-family: var(--mainFont);
+    font-weight: lighter;
+}
+.discovercofeebtn{
+    padding: 15px 40px;
+    border: 2px solid var(--mainColor);
+    background: linear-gradient(to right,#C9A581,#ffe2c5);
+    color: var(--secondColor);
+    transition: background 5s ease-in-out;
+}
+.discovercofeebtn:hover{
+    background: linear-gradient(to left,#C9A581,#ffe2c5);
+
+}
+/* Base styles for the button */
+.bookatablebtn {
+    position: relative; /* Required for positioning the pseudo-element */
+    display: inline-block; /* Ensures the button behaves like a block */
+    padding: 15px 40px;
+    border: 2px solid var(--mainColor);
+    background: none;
+    color: var(--mainColor);
+    font-family: var(--mainFont);
+    text-decoration: none; 
+    overflow: hidden; 
+    z-index: 1; /* Creates a stacking context */
+  }
+  
+  /* Pseudo-element for the hover effect */
+  .bookatablebtn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(to right,#C9A581,#edd4bb) ; /* Hover background color */
+    transform: scale(0); /* Start as invisible */
+    z-index: -1; /* Place it behind the button's content */
+    transition: transform 0.5s ease; /* Smooth transition */
+    border-radius: 75px;
+  }
+  
+  /* Hover effect for the pseudo-element */
+  .bookatablebtn:hover::before {
+    transform: scale(1); /* Expand to fill the button */
+  }
+  .bookatablebtn:hover {
+    color: var(--secondColor);
+}
+/* Existing styles remain unchanged */
+
+/* Media Query for Tablets (e.g., screens up to 768px) */
+@media (max-width: 768px) {
+    .header .container {
+        top: 15%; /* Adjust container positioning */
+    }
+
+    .crafted {
+        width: 70%; /* Increase width for better readability */
+        font-size: 16px; /* Slightly smaller font size */
+    }
+
+    .headertitle {
+        width: 80%; /* Increase width for better readability */
+        font-size: 40px; /* Smaller font size for tablets */
+    }
+
+    .discover {
+        width: 80%; /* Increase width for better readability */
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .discovercofeebtn,
+    .bookatablebtn {
+        padding: 12px 30px; /* Smaller padding for buttons */
+        font-size: 14px; /* Smaller font size */
+    }
+}
+
+/* Media Query for Mobile Devices (e.g., screens up to 576px) */
+@media (max-width: 576px) {
+  .header .container{
+    margin-left: 0;
+   }
+
+    .crafted {
+        width: 90%; /* Full width for mobile */
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .headertitle {
+        width: 100%; /* Full width for mobile */
+        font-size: 22px; /* Smaller font size for mobile */
+    }
+
+    .discover {
+        width: 90%; /* Full width for mobile */
+        font-size: 10px; /* Smaller font size */
+    }
+    .d-flex.justify-content-lg-start {
+        flex-direction: row; /* Ensure buttons are in a row */
+        flex-wrap: wrap; /* Allow wrapping if needed */
+        gap: 10px; /* Add spacing between buttons */
+    }
+
+    .discovercofeebtn,
+    .bookatablebtn {
+        padding: 7px 5px; /* Smaller padding for buttons */
+        font-size: 9px; /* Smaller font size */
+        position: relative;
+        bottom: 55px; 
+        flex: 1; /* Allow buttons to grow and share space */
+        min-width: 120px; /* Set a minimum width for buttons */
+        text-align: center; /* Center text inside buttons */
+   
+    }
+
+    .scrolling-content {
+        font-size: 12px; /* Smaller font size for scrolling text */
+    }
+}
+/*end header section*/
+/*start marquee section*/
+
+.scrolling-content {
+    flex-shrink: 0;
+    display: flex;
+    gap: var(--gap);
+    min-width: 100%;
+    animation: scroll 50s linear infinite;
+    font-family: var(--mainFont);
+}
+.scrolling-ticker-box {
+    padding: 35px;
+    background-color: var(--mainColor);
+    --gap: 30px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+    align-items: center;
+    margin-bottom: -20px;
+    font-size: 40px;
+    color: var(--secondColor);
+    user-select: none;
+}
+@keyframes scroll {
+    
+
+0% {
+    transform: translateX(0);
+}
+100% {
+    transform: translateX(calc(-100% - var(--gap)));
+}
+}
+/*end marquee section*/
+/*start first section*/
+.opening{
+    margin-top: 30px;
+    padding: 30px 0;
+    background-image: url('../images/about-us/pricing-bg-image.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.opening-time-box {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+    max-width: 320px;
+    background: linear-gradient(90deg, var(--accent-color) 0%, var(--accent-secondary-color) 50%, var(--accent-color) 100%);
+    background-size: 200% auto;
+    border-radius: 26px;
+    padding: 30px;
+    transition: all 0.4s ease-in-out;
+    z-index: 1;
+}
+.openingimage img{
+    width: 100%;
+border-top-left-radius: 50%;
+border-top-right-radius: 50%;
+}
+.aboutus{
+    font-size: small;
+    font-family:var(--mainFont) ;
+}
+.generator-container
+{
+    width: 50%;
+}
+.bringing {
+    width: 100%;
+    text-align: left;
+    font-size: 60px;
+    font-family: var(--mainFont);
+  }
+  
+ /* Page load animation */
+/* Slide in from right animation for .bringing */
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 1.5s ease-out;
+  }
+  
+  .slide-in-right.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  /* Reveal animation for other elements */
+  .reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-out;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+.openingimage{
+    position: relative;
+}
+.timeicon{
+    width: 50px;
+    height: 50px;
+    background-color: var(--secondColor);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.timeopen{
+    width: 60%;
+    background: linear-gradient(to left,#C9A581,#feefe0);
+    padding: 20px;
+    position: absolute;
+    bottom: 100px;
+    left: -50px;
+    border-radius: 30px;
+    transition: all .7s;
+}
+.timeopen:hover{
+    background: linear-gradient(to right,#C9A581,#feefe0);
+
+}
+
+.opening-time-content{
+    color: var(--secondColor);
+    width: 100%;
+}
+.opening-time-content ul li span {
+    width: 45%;
+}
+.opening-time-content ul li:last-child {
+    margin-bottom: 0;
+}
+.opening-time-content ul li {
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.fooddelivarycontent {
+    width: calc(100% - 90px);
+}
+
+.fooddelivarycontent p {
+    line-height: 1.6em;
+}
+
+.fooddelivaryicon {
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    border-radius: 50%;
+    background-color: #23333c; /* Solid color background */
+    position: relative;
+    overflow: hidden; /* Ensure the pseudo-element stays within the circle */
+}
+
+.fooddelivaryicon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(to top,#C9A581,#f3e0cd);
+    transform: scalex(0) scaleY(0); 
+    z-index: -1;
+    transition: all .5s; /* Transition the opacity */
+    border-radius: 50%; /* Match the parent's border-radius */
+}
+.fooddelivaryicon img {
+    width: 30px; /* Adjust size as needed */
+    height: auto;
+    transition: filter 0.5s; /* Smooth transition for color change */
+    z-index: 1; /* Ensure the image is above the pseudo-element */
+  }
+  .food-delivary:hover .fooddelivaryicon img {
+    filter: brightness(0) invert(16%) sepia(74%) saturate(335%) hue-rotate(180deg); /* Custom filter to match #121D23 */
+  }
+.food-delivary:hover .fooddelivaryicon::before {
+   transform: scalex(1) scaleY(1); 
+}
+/* Existing styles remain unchanged */
+
+/* Media Query for Tablets (e.g., screens up to 768px) */
+@media (max-width: 768px) {
+    .generator-container {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .bringing {
+        font-size: 48px; /* Slightly smaller font size for tablets */
+    }
+}
+
+/* Media Query for Mobile Devices (e.g., screens up to 576px) */
+@media (max-width: 576px) {
+    .bringing {
+        font-size: 36px; /* Smaller font size for mobile */
+    }
+
+    .timeopen {
+      width: 100%; /* Full width on mobile */
+        left: 0; /* Reset positioning */
+        bottom: 0px; /* Adjust positioning */
+    }
+
+    .food-delivary {
+        flex-direction: column; /* Stack food delivery items vertically */
+        align-items: center; /* Center align items */
+    }
+
+    .fooddelivarycontent {
+        width: 100%; /* Full width for content */
+        text-align: center; /* Center align text */
+    }
+
+    
+}
+
+.play-button {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #c9a581, #f2decb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    animation: glowing 1.5s infinite;
+}
+
+.play-icon {
+    width: 0;
+    height: 0;
+    border-left: 20px solid var(--secondColor);
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    margin-left: 5px;
+}
+
+@keyframes glowing {
+    0% { box-shadow: 0 0 5px #BA7D7D; }
+    50% { box-shadow: 0 0 20px #BA7D7D; }
+    100% { box-shadow: 0 0 5px #BA7D7D; }
+}
+/* Play Button Styling */
+.play-button {
+    width: 70px;
+    height: 70px;
+    background-color: #C9A581;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.play-icon {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid var(--secondColor);
+}
+
+/* Modal Styling */
+.my-modal {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.d-none {
+    display: none;
+}
+
+.imageproducts {
+    background-color: antiquewhite;
+    padding: 20px;
+    border-radius: 20px;
+    width: 90%; /* Responsive width */
+    max-width: 800px; /* Maximum width */
+    position: relative;
+}
+
+iframe {
+    width: 100%;
+    height: 400px; /* Fixed height for the video */
+    border: none;
+    border-radius: 10px;
+}
+
+.x-btn {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    fill: white;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 5px;
+    top: -15px;
+    right: -15px;
+    z-index: 1001; /* Ensure it's above the iframe */
+}
+
+/*end first section*/
+/*-----start second section---*/
+.chooseus{
+    padding: 30px 0;
+    background-image: url('../images/choose-us/beans.png');
+    height: 120dvh;
+    background-repeat: no-repeat;
+    background-position-y: calc(100% - 100px);
+    background-color: #172127;
+}
+
+.bi{
+    fill: var(--mainColor);
+}
+.flavorh2{
+    font-family: var(--primaryFont);
+    white-space: auto;
+    line-height: 60px;
+    font-size: 55px;
+    
+}
+.contactbtn {
+    background: linear-gradient(to right, #C9A581, #f2decb);
+    padding: 10px 20px;
+    color: var(--secondColor);
+    border: none; /* Optional: Remove default button border */
+    cursor: pointer; /* Add pointer cursor for better UX */
+    transition: all 2s ease-in-out; /* Smooth transition for hover */
+    font-family: var(--mainFont);
+    
+  }
+  
+  .contactbtn:hover {
+    background: linear-gradient(to left, #C9A581, #f2decb); /* Reverse gradient on hover */
+  }
+ 
+.cooseusright {
+    position: sticky; /* Makes the element stick to the viewport */
+    top: 0px; /* Distance from the top of the viewport */
+    max-height: calc(100dvh - 400px); /* Ensures it doesn't overflow the viewport */
+  }
+  
+  /* Ensure the parent container has proper layout */
+  .chooseus {
+    position: relative; /* Establishes a positioning context */
+    padding-bottom: 10px; /* Add extra space at the bottom of the section */
+  }
+  
+  .cooseusright > * {
+    margin-top: 30px; /* Space between elements inside cooseusright */
+  }
+  
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 1.5s ease-out;
+  }
+  
+  .slide-in-right.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+.servicespara{
+font-family:var(--mainFont) ;
+font-size:18px;
+font-weight:400;
+line-height: 28.8px;
+color:rgb(206, 206, 206);
+
+}
+
+.serviceicon {
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    border-radius: 50%;
+    background-color: #23333c; /* Solid color background */
+    position: relative;
+    overflow: hidden; /* Ensure the pseudo-element stays within the circle */
+}
+
+.serviceicon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(to top,#C9A581,#f3e0cd);
+    transform: scalex(0) scaleY(0); 
+    z-index: -1;
+    transition: all .5s; /* Transition the opacity */
+    border-radius: 50%; /* Match the parent's border-radius */
+}
+.serviceicon img {
+    width: 30px; /* Adjust size as needed */
+    height: auto;
+    transition: filter 0.5s; /* Smooth transition for color change */
+    z-index: 1; /* Ensure the image is above the pseudo-element */
+  }
+  .services:hover .serviceicon img {
+    filter: brightness(0) invert(16%) sepia(74%) saturate(335%) hue-rotate(180deg); /* Custom filter to match #121D23 */
+  }
+.services:hover .serviceicon::before {
+   transform: scalex(1) scaleY(1); 
+}
+/*-----end second section----*/
+/*----start adventure section*/
+.adventure{
+    padding: 30px 0px;
+    background: linear-gradient(to right, rgba(8, 9, 20, 0.7),rgba(8, 9, 20, 0.7)), url('../images/journey/adventure.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.journeyparagraph{
+    color: var(--mainColor);
+    font-family: var(--mainFont);
+}
+.counter {
+    font-size: 2em;
+    font-family: var(--primaryFont);
+}
+.perficon{
+    width: 50px;
+    height: 50px;
+    background-color: #424c535d;
+    z-index: 1;
+    position: relative;
+    overflow: hidden; 
+}
+.perficon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(to top,#C9A581,#f3e0cd);
+    transform: scalex(0) scaleY(0); 
+    z-index: -1;
+    transition: all .5s; /* Transition the opacity */
+    border-radius: 50%; /* Match the parent's border-radius */
+}
+.perficon img {
+  
+    transition: filter 0.5s; /* Smooth transition for color change */
+    z-index: 1; /* Ensure the image is above the pseudo-element */
+  }
+.performance:hover .perficon img {
+    filter: brightness(0) invert(16%) sepia(74%) saturate(335%) hue-rotate(180deg); /* Custom filter to match #121D23 */
+  }
+.performance:hover .perficon::before {
+   transform: scalex(1) scaleY(1); 
+}
+/*----end adventure section*/
+/*start our price section*/
+
+/*end our price section*/
+
+
+
